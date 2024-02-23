@@ -1,0 +1,46 @@
+body{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    height: 100vh;
+    background: rgb(181, 25, 51);
+}
+.box{
+    width: 150px;
+    height: 80;
+    border: 3px solid black;
+    border-radius: 12px;
+    position: relative;
+}
+.box:before{
+    content:"";
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    height: 25px;
+    background-color: blueviolet;
+    border: 3px solid whitesmoke;
+}
+.box:after{
+    content: "";
+     border-radius: 7px;
+    animation: animate 5s linear infinite;
+}
+@keyframes animate{
+0%{
+    width: 0%;
+    background-color: blue;
+}
+25%{
+    width: 25%;
+    background-color: orange;
+}
+50%{
+    width: 50%;
+    background: yellow;
+}
+100%{
+    width: 100%;
+    background: green;
+ }
+}
